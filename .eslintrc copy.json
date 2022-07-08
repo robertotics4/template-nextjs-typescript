@@ -27,8 +27,32 @@
         "prettier"
     ],
     "rules": {
+      "camelcase": "off",
+      "import/no-duplicates": "off",
+      "react/jsx-props-no-spreading": "off",
+      "prettier/prettier": "error",
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": [
+            "Link"
+          ],
+          "specialLink": [
+            "hrefLeft",
+            "hrefRight"
+          ],
+          "aspects": [
+            "invalidHref",
+            "preferButton"
+          ]
+        }
+      ],
+      "react/jsx-one-expression-per-line": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
+      "react/require-default-props": "off",
       "react/jsx-filename-extension": [
         1,
         {
@@ -37,11 +61,7 @@
           ]
         }
       ],
-      "no-use-before-define": "off",
-      "@typescript-eslint/no-use-before-define": [
-        "error"
-      ],
-      "react/react-in-jsx-scope": "off",
+      "import/prefer-default-export": "off",
       "import/extensions": [
         "error",
         "ignorePackages",
@@ -50,9 +70,18 @@
           "tsx": "never"
         }
       ],
-      "prettier/prettier": "error"
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          "allowExpressions": true
+        }
+      ],
+      "@typescript-eslint/camelcase": "off"
     },
     "settings": {
+      "react": {
+        "version": "detect"
+      },
       "import/resolver": {
         "typescript": {}
       }
